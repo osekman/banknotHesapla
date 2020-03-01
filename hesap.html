@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <span>Sonuc: </span>
+        <span id="sonuc"> </span>
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+
+        $.hesapla = function(sayi){
+
+            var ikiyuz  = parseInt(sayi/200);
+            var yuz     = parseInt((sayi%200)/100);
+            var elli    = parseInt((sayi%100)/50);
+            var yirmi   = parseInt((sayi%50)/20);
+            var on      = parseInt((sayi%20)/10);
+            var bes     = parseInt((sayi%10)/5);
+
+            $("#sonuc").text(" ikiyüzden : "+ikiyuz+" >> yuzden : "+yuz+" >> elliden : "+elli+" >> yirmiden : "+yirmi+" >> ondan : "+on+" >> besten : "+bes);
+  
+        }
+        
+    });
+
+</script>
