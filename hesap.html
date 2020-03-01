@@ -7,7 +7,7 @@
 </head>
 <body>
     <label for ="tutar">Tutar Giriniz :</label>
-    <input type="number" id="tutar" placeholder="tutar..">
+    <input type="number" id="tutar" placeholder="tutar.." onkeydown="if(event.keyCode==13) $.hesapla();">
     <div>
         <span style="color: brown;">Sonuc: </span>
         <span id="sonuc"> </span>
@@ -17,9 +17,6 @@
 
 <script>
     $(document).ready(function(){
-
-
-
         $.hesapla = function(){
             var sayi = $("#tutar").val();
             var ikiyuz  = parseInt(sayi/200);
@@ -30,7 +27,6 @@
             var bes     = parseInt((sayi%10)/5);
 
             $("#sonuc").text(" ikiyüzden : "+ikiyuz+" >> yuzden : "+yuz+" >> elliden : "+elli+" >> yirmiden : "+yirmi+" >> ondan : "+on+" >> besten : "+bes);
-  
         }
         
     });
